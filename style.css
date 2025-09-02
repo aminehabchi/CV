@@ -1,0 +1,253 @@
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier Prime', monospace;
+            background: #ece9e2;
+            color: #111;
+            padding: 30px;
+            line-height: 1.5;
+        }
+
+        .document {
+            max-width: 900px;
+            margin: auto;
+            background: #fffdf7;
+            border: 3px solid #000;
+            box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.25);
+            position: relative;
+            padding: 20px;
+            background-image: url("background.jpeg");
+        }
+
+        .case-number {
+            font-weight: bold;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed #333;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .left-section {
+            flex: 2;
+        }
+
+        .right-section {
+            flex: 1;
+            border-left: 2px solid #000;
+            padding-left: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 6px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #aaa;
+            font-size: 14px;
+        }
+
+        .info-label {
+            width: 120px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .info-value {
+            flex: 1;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 20px 0 10px 0;
+            text-transform: uppercase;
+            border-bottom: 2px solid #000;
+            padding-bottom: 2px;
+        }
+
+        .favorites .fav-category {
+            margin-bottom: 12px;
+        }
+
+        .fav-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            font-size: 13px;
+        }
+
+        /* Mugshot */
+        .mugshot {
+            width: 250px;
+            height: 250px;
+            border: 2px solid #000;
+
+
+            background-image: url("ahabchi.jpg");
+            background-size: contain;
+            /* ✅ keeps image fully visible */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position: center;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .height-markers {
+            z-index: 10;
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            bottom: 10px;
+            width: 20px;
+            background: repeating-linear-gradient(to bottom,
+                    #000 0px,
+                    #000 1px,
+                    transparent 1px,
+                    transparent 20px);
+            opacity: 0.6;
+        }
+
+        /* Projects grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .project-card {
+            border: 2px solid #000;
+            background: #fcfaf2;
+            padding: 12px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            background: #fffceb;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-desc {
+            font-size: 12px;
+            color: #333;
+            font-style: italic;
+        }
+
+        /* Interests & Challenges */
+        .likes-dislikes {
+            display: flex;
+            gap: 30px;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+
+        .section-header {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-size: 14px;
+            border-bottom: 1px dashed #555;
+            padding-bottom: 2px;
+        }
+
+        /* Contact links */
+        .contact-info a {
+            display: block;
+            font-size: 13px;
+            color: #000;
+            text-decoration: none;
+            margin-bottom: 6px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Confidential stamp */
+        .classified-stamp {
+            position: absolute;
+            top: 20px;
+            right: -40px;
+            background: red;
+            color: #fff;
+            padding: 6px 20px;
+            transform: rotate(15deg);
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .right-section {
+            font-size: 14px;
+            line-height: 1.6;
+            /* better spacing between lines */
+        }
+
+        .right-section h3 {
+            font-size: 16px;
+            margin: 20px 0 10px;
+            /* space before + after */
+            text-decoration: underline;
+        }
+
+        .contact-info a,
+        .contact-info div {
+            display: block;
+            /* each contact on new line */
+            margin-bottom: 6px;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .certifications p,
+        .education p,
+        .experience p {
+            margin: 4px 0;
+            /* tighter but clean spacing */
+        }
+
+        a {
+            color: inherit;
+            /* Keep text color same as surrounding text */
+            text-decoration: none;
+            /* Remove underline */
+            cursor: pointer;
+            /* Pointer cursor on hover */
+            transition: all 0.2s;
+            /* Smooth hover effect */
+        }
+
+        /* Add underline on hover only */
+        a:hover {
+            text-decoration: underline;
+        }
